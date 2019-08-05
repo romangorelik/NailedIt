@@ -4,6 +4,7 @@ import store from '../redux-state/store'
 
 import LandingPage from './LandingPage.jsx'
 import AboutUs from './AboutUs.jsx'
+import Features from './Features.jsx';
 
 window.store = store
 
@@ -17,6 +18,7 @@ class AppInformation extends React.Component {
       <div>
         <LandingPage />
         <AboutUs />
+        <Features />
       </div>
     )
   }
