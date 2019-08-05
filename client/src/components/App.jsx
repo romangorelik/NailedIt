@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import store from '../redux-state/store'
 
 import LandingPage from './LandingPage.jsx'
+import AboutUs from './AboutUs.jsx'
 
 window.store = store
 
@@ -15,6 +16,7 @@ class AppInformation extends React.Component {
     return (
       <div>
         <LandingPage />
+        <AboutUs />
       </div>
     )
   }
