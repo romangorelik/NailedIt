@@ -7,6 +7,7 @@ import AboutUs from './AboutUs.jsx'
 import Features from './Features.jsx';
 import Packages from './Packages.jsx';
 import Testimonial from './Testimonials.jsx';
+import Footer from './Footer.jsx';
 
 window.store = store
 
@@ -23,6 +24,7 @@ class AppInformation extends React.Component {
         <Features />
         <Packages />
         <Testimonial />
+        <Footer />
       </div>
     )
   }

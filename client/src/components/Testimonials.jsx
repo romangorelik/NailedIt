@@ -14,7 +14,7 @@ class TestimonialsJSX extends React.Component {
 			  </div>
 
         <div className="u-text-center u-margin-bottom-big">
-          <h2 className="heading-secondary">Here from our customers</h2>
+          <h2 className="heading-secondary">Hear from our customers</h2>
         </div>
 
         <div className="row">
