@@ -8,6 +8,7 @@ import Features from './Features.jsx';
 import Packages from './Packages.jsx';
 import Testimonial from './Testimonials.jsx';
 import Footer from './Footer.jsx';
+import Navigation from './Navigation.jsx';
 
 window.store = store
 
@@ -19,6 +20,7 @@ class AppInformation extends React.Component {
   render () {
     return (
       <div>
+        <Navigation />
         <LandingPage />
         <AboutUs />
         <Features />
