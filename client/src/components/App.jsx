@@ -6,6 +6,7 @@ import LandingPage from './LandingPage.jsx'
 import AboutUs from './AboutUs.jsx'
 import Features from './Features.jsx';
 import Packages from './Packages.jsx';
+import Testimonial from './Testimonials.jsx';
 
 window.store = store
 
@@ -21,6 +22,7 @@ class AppInformation extends React.Component {
         <AboutUs />
         <Features />
         <Packages />
+        <Testimonial />
       </div>
     )
   }
