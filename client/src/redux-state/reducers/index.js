@@ -5,23 +5,21 @@ const initialState = {
 }
 
 function rootReducer(state = initialState, action) {
+  if (action.type === 'SET_USERS') {
+    return Object.assign({}, state, {
+      basic: action.payload.basic,
+      premium: action.payload.premium,
+      vip: action.payload.vip
+    })
+  }
+
   if (action.type === 'ADD_BASIC') {
     return Object.assign({}, state, {
       basic: state.basic + 1
     })
   }
 
-  if (action.type === 'ADD_PREMIUM') {
-    return Object.assign({}, state, {
-      premium: state.premium + 1
-    })
-  }
-
-  if (action.type === 'ADD_VIP') {
-    return Object.assign({}, state, {
-      vip: state.vip + 1
-    })
-  }
+  
   
   return state
 }

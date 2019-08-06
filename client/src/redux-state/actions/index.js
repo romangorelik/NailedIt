@@ -1,11 +1,4 @@
-export function addBasic(payload) {
-  return {type: 'ADD_BASIC', payload}
+export function setNumbers(payload) {
+  return {type: 'SET_USERS', payload}
 }
 
-export function addPremium(payload) {
-  return {type: 'ADD_PREMIUM', payload}
-}
-
-export function addVip(payload) {
-  return {type: 'ADD_VIP', payload}
-}
