@@ -1,28 +1,67 @@
 import React from 'react'
 import { connect} from 'react-redux'
 import c3 from '../../dist/c3.min.js'
+import { addBasic, addPremium, addVip } from '../redux-state/actions/index'
+
+const mapStateToProps = state => {
+  return {
+    basicMember: state.basic,
+    premiumMember: state.premium,
+    vipMember: state.vip
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addBasic: basic => dispatch(addBasic(basic)),
+    addPremium: premium => dispatch(addPremium(premium)),
+    addVip: vip => dispatch(addVip(vip))
+  }
+}
 
 class PackagesJSX extends React.Component {
   state = {
     basic: {
       list: ['1 Drink', '1 Service', '1 Stylist', '4 Day Appointment Notice', '1 Day Cancellation Notice'],
-      price: '289',
-      users: '30'
+      price: '289'
     },
     premium: {
       list: ['3 Drinks', '2 Services', '2 Stylists', '1 Day Appointment Notice', '1 Day Cancellation Notice'],
-      price: '489',
-      users: '60'
+      price: '489'
     },
     vip: {
       list: ['Unlimited Drinks', '5 Services', '3 Stylists', 'Same Day Appointment', 'Same Day Cancellation'],
-      price: '869',
-      users: '10'
-    }
+      price: '869'
+    },
+    total: [30, 60, 10]
   }
 
   componentDidMount () {
-    this.proportionGraph();
+
+    let total = this.props.basicMember + this.props.premiumMember + this.props.vipMember
+    let basic = this.props.basicMember / total * 100
+    let premium = this.props.premiumMember / total * 100
+    let vip = this.props.vipMember / total * 100
+    let totals = [basic, premium, vip]
+
+    this.setState({
+      total: totals
+    }, () => {
+      this.proportionGraph();
+    })
+
+  }
+
+  addBasicMember = () => {
+    this.props.addBasic();
+  }
+
+  addPremiumMember = () => {
+    this.props.addPremium();
+  }
+
+  addVIPMember = () => {
+    this.props.addVip();
   }
 
   proportionGraph = () => {
@@ -31,7 +70,7 @@ class PackagesJSX extends React.Component {
 			data: {
         // iris data from R
         columns: [
-            ['Users', this.state.basic.users],
+            ['Users', this.state.total[0]],
         ],
         type : 'gauge',
       },
@@ -55,7 +94,7 @@ class PackagesJSX extends React.Component {
 			data: {
         // iris data from R
         columns: [
-            ['Users', this.state.premium.users],
+            ['Users', this.state.total[1]],
         ],
         type : 'gauge',
       },
@@ -79,7 +118,7 @@ class PackagesJSX extends React.Component {
 			data: {
         // iris data from R
         columns: [
-            ['Users', this.state.vip.users],
+            ['Users', this.state.total[2]],
         ],
         type : 'gauge',
       },
@@ -149,7 +188,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.basic.price}</p>
                     </div>
-                    <a href="#popup" className="btn btn--white">Sign up now!</a>
+                    <a href="#popup" className="btn btn--white" onClick={this.addBasicMember}>Sign up now!</a>
                   </div>
                 </div>
               </div>
@@ -182,7 +221,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.premium.price}</p>
                     </div>
-                    <a href="#popup" className="btn btn--white">Sign up now!</a>
+                    <a href="#popup" className="btn btn--white" onClick={this.addPremiumMember}>Sign up now!</a>
                   </div>
                 </div>
               </div>
@@ -215,7 +254,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.vip.price}</p>
                     </div>
-                    <a href="#popup" className="btn btn--white">Sign up now!</a>
+                    <a href="#popup" className="btn btn--white" onClick={this.addVIPMember}>Sign up now!</a>
                   </div>
                 </div>
               </div>
@@ -228,6 +267,6 @@ class PackagesJSX extends React.Component {
   }
 }
 
-const Packages = connect(null)(PackagesJSX)
+const Packages = connect(mapStateToProps, mapDispatchToProps)(PackagesJSX)
 
 export default Packages
