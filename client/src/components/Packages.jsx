@@ -135,7 +135,7 @@ class PackagesJSX extends React.Component {
 
   render () {
     return (
-      <section className='section-packages' id='packages'>
+      <section className='section-packages' id='section-packages'>
         <div className="u-text-center u-margin-bottom-big">
           <h2 className="heading-secondary">
             Packages
@@ -183,7 +183,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.basic.price}</p>
                     </div>
-                    <a href="#popup" className="btn btn--white" onClick={() => this.addMembers('basic')}>Sign up now!</a>
+                    <a href="#popup1" className="btn btn--white" onClick={() => this.addMembers('basic')}>Sign up now!</a>
                   </div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.premium.price}</p>
                     </div>
-                    <a href="#popup" className="btn btn--white" onClick={() => this.addMembers('premium')}>Sign up now!</a>
+                    <a href="#popup2" className="btn btn--white" onClick={() => this.addMembers('premium')}>Sign up now!</a>
                   </div>
                 </div>
               </div>
@@ -249,7 +249,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.vip.price}</p>
                     </div>
-                    <a href="#popup" className="btn btn--white" onClick={() => this.addMembers('vip')}>Sign up now!</a>
+                    <a href="#popup3" className="btn btn--white" onClick={() => this.addMembers('vip')}>Sign up now!</a>
                   </div>
                 </div>
               </div>

@@ -9,6 +9,9 @@ import Packages from './Packages.jsx';
 import Testimonial from './Testimonials.jsx';
 import Footer from './Footer.jsx';
 import Navigation from './Navigation.jsx';
+import Popup1 from './Popups/Popup1.jsx';
+import Popup2 from './Popups/Popup2.jsx';
+import Popup3 from './Popups/Popup3.jsx';
 
 window.store = store
 
@@ -27,6 +30,9 @@ class AppInformation extends React.Component {
         <Packages />
         <Testimonial />
         <Footer />
+        <Popup1 />
+        <Popup2 />
+        <Popup3 />
       </div>
     )
   }

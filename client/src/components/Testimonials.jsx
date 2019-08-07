@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 class TestimonialsJSX extends React.Component {
   render () {
     return (
-      <section className='section-testimonial'>
+      <section className='section-testimonial' id='section-testimonial'>
 
         <div className="bg-video">
 				  <video className="bg-video__content" autoPlay muted loop>

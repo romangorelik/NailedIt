@@ -32,7 +32,7 @@ class LandingPageJSX extends React.Component {
         <div className="header__text-box">
           <h1 className="heading-primary heading-primary--top">Nailed It</h1>
           <h1 className="heading-primary heading-primary--sub">All in one salon experience</h1>
-          <a href="#packages" className="btn btn--white">Get more information</a>
+          <a href="#section-packages" className="btn btn--white">Get more information</a>
         </div>
       </header>
     )

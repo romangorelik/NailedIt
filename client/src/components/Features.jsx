@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const FeaturesJSX = () => (
-  <section className='section-features'>
+  <section className='section-features' id='section-features'>
     <div className="row">
 
       <div className="col-1-of-4">

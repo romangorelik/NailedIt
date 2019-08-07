@@ -2,7 +2,7 @@ import React from 'react'
 import { connect} from 'react-redux'
 
 const AboutUsJSX = () => (
-  <section className='section-about'>
+  <section className='section-about' id='section-about'>
 
     <div className="u-text-center u-margin-bottom-big">
       <h2 className="heading-secondary">Our Story</h2>

@@ -1,0 +1,31 @@
+import React from 'react'
+import { connect } from 'react-redux'
+
+class PopupJSX extends React.Component {
+
+  
+
+  render () {
+    return (
+      <div className="popup" id='popup1'>
+        <div className="popup__content">
+          <div className="popup__left">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Table Photo" className="popup__image"/>
+            <img src="https://images.unsplash.com/photo-1510279931157-4ca63af8a363?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Table Photo" className="popup__image"/>
+          </div>
+          <div className="popup__right">
+            <a href="#section-packages" className="popup__close">&times;</a>
+            <h2 className="heading-secondary u-margin-bottom-small ">Basic</h2>
+				    <h3 className="heading-tertiary u-margin-bottom-small ">Register your information now</h3>
+
+            
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+const Popup1 = connect(null)(PopupJSX)
+
+export default Popup1
