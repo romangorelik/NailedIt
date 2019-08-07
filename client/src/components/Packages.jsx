@@ -46,13 +46,6 @@ class PackagesJSX extends React.Component {
       .catch(err => console.error(err))
   }
 
-  addMembers = (user) => {
-    axios.patch('/users/userCount', {
-      userType: user
-    })
-      .catch(err => console.error(err))
-  }
-
 
   proportionGraph = () => {
     let total = this.props.basicMember + this.props.premiumMember + this.props.vipMember
@@ -183,7 +176,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.basic.price}</p>
                     </div>
-                    <a href="#popup1" className="btn btn--white" onClick={() => this.addMembers('basic')}>Sign up now!</a>
+                    <a href="#popup1" className="btn btn--white">Sign up now!</a>
                   </div>
                 </div>
               </div>
@@ -216,7 +209,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.premium.price}</p>
                     </div>
-                    <a href="#popup2" className="btn btn--white" onClick={() => this.addMembers('premium')}>Sign up now!</a>
+                    <a href="#popup2" className="btn btn--white">Sign up now!</a>
                   </div>
                 </div>
               </div>
@@ -249,7 +242,7 @@ class PackagesJSX extends React.Component {
                       <p className="card__price-only">Only</p>
                       <p className="card__price-value">${this.state.vip.price}</p>
                     </div>
-                    <a href="#popup3" className="btn btn--white" onClick={() => this.addMembers('vip')}>Sign up now!</a>
+                    <a href="#popup3" className="btn btn--white">Sign up now!</a>
                   </div>
                 </div>
               </div>
