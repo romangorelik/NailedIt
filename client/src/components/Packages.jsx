@@ -136,15 +136,15 @@ class PackagesJSX extends React.Component {
         </div>
 
         <div className="u-text-center u-margin-top-huge">
-          <div className="row">
+          <div className="row graph-container">
             <div className="col-1-of-3">
-              <div className="graph" ref={ graph1 => this.graph1 = graph1 }></div>
+              <div className="graph-container__graph" ref={ graph1 => this.graph1 = graph1 }></div>
             </div>
             <div className="col-1-of-3">
-              <div className="graph" ref={ graph2 => this.graph2 = graph2 }></div>
+              <div className="graph-container__graph" ref={ graph2 => this.graph2 = graph2 }></div>
             </div>
             <div className="col-1-of-3">
-              <div className="graph" ref={ graph3 => this.graph3 = graph3 }></div>
+              <div className="graph-container__graph" ref={ graph3 => this.graph3 = graph3 }></div>
             </div>
           </div>
         </div>

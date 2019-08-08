@@ -24,7 +24,7 @@ class TestimonialsJSX extends React.Component {
               <figcaption className="story__caption">Ana Vasquez</figcaption>
             </figure>
             <div className="story__text">
-              <h3 className="heading-tertiary u-margin-bottom-small">Best service on the market</h3>
+              <h3 className="heading-tertiary u-margin-bottom-small heading-tertiary--testimonial">Best service on the market</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat mollitia, quibusdam laborum praesentium quia suscipit harum maiores voluptates blanditiis. Commodi, hic. Consequatur in iusto tempora, enim voluptates adipisci incidunt nesciunt?</p>
             </div>
           </div>
@@ -37,7 +37,7 @@ class TestimonialsJSX extends React.Component {
               <figcaption className="story__caption">Hannah Godwin</figcaption>
             </figure>
             <div className="story__text">
-              <h3 className="heading-tertiary u-margin-bottom-small">They really do have the best stylists</h3>
+              <h3 className="heading-tertiary u-margin-bottom-small heading-tertiary--testimonial">They really do have the best stylists</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat mollitia, quibusdam laborum praesentium quia suscipit harum maiores voluptates blanditiis. Commodi, hic. Consequatur in iusto tempora, enim voluptates adipisci incidunt nesciunt?</p>
             </div>
           </div>
