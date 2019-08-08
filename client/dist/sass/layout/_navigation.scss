@@ -109,6 +109,10 @@
 
   &__checkbox:checked~&__background {
     transform: scale(70);
+
+    @include respond(big-desk) {
+      transform: scale(100);
+    }
   }
 
   &__checkbox:checked~&__nav {
